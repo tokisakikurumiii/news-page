@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    .box1{
+        padding-top:20px ;
+        padding-left: 50px;
+        width: 1300px;
+        height: 100px;
+        background-color:#1f1f1f;
+        display:block
+    }
+    .box1 span{
+        background-color: red;
+        color: white;
+        border-radius: 10px;
+    }
+    .box1 span:hover{
+        background-color: blue;
+    }
+    div{
+        width: 1300px;
+        background-color:#242424;
+        color:white
+    }
+    div h2{
+        font-size: 15px;
+    }
+    .img{
+        width: 1300px;
+        display: block;
+
+        text-align: center;
+
+    }
+    .body{
+        padding-top:  50px;
+        width: 1300px;
+        font-size: 20px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+
+    }
+    a:hover{
+        color: blue;
+    }
+   .box2{
+    width: 100px; height: 100px;   /* ① 最终尺寸 */
+    margin: 40px auto 0;           /* ② auto 左右居中（比 margin-left:50px 正）*/
+    border-radius: 50%;            /* ③ 圆形 */
+    overflow: hidden;
+    background-color: #242424;              /* ④ 关键：把超出圆框的图片裁掉 */
+}
+.box2 img{
+    width: 100%;      /* 图片宽 = 盒子宽，这才真正把图片限住 */
+    height: 100%;
+    object-fit: cover;/* 裁剪填充：图片不变形，多余部分裁掉 */
+    display: block;
+}
+.sign{
+    display: flex;              /* ← 核心：让子盒子横着排成一队 */
+    align-items: center;        /* 垂直方向居中对齐 */
+    padding: 40px 0 0 50px;     /* 左边 50px，和正文对齐 */
+}
+.av{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;         /* 圆形 */
+    overflow: hidden;           /* 裁掉溢出（上次学的四件套） */
+    flex-shrink: 0;             /* 不许被文字挤扁 */
+}
+.av img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.info{
+    margin-left: 20px;          /* 头像和文字之间留口气 */
+}
+.name{
+    font-size: 24px;
+    letter-spacing: .05em;
+}
+.hub{
+    margin-top: 8px;
+    font-size: 15px;
+    color: #9a9a9a;             /* 次要信息压低对比度 */
+}
+.hub a{
+    color: #d4af37;             /* GitHub 链接给个金色，和你页面呼应 */
+}
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <img src="./avatar.jpg" alt="" width=60px></img>
+        <span>关注</span>
+    </div>
+    <div>
+        <h1>LOL韩国队亚运会夺冠，faker再次解锁新成就，可以终身领取奖金</h1>
+        <p>LOL韩国队亚运会夺冠，faker再次解锁新成就，可以终身领取奖金，
+            Faker又解锁了一项新成就，10月2日，韩国队在名古屋亚运会《英雄联盟》项目决赛中3比0战胜中国台北队，成功实现亚运两连冠，虽然Faker并没有在决赛中登场，
+            但凭借杭州亚运会和本届亚运会两枚金牌，他与Zeus、Keria三人正式达到了韩国体育年金的领取标准。</p>
+            <div class="img"> <img src="./news1.webp" alt="" width=1000 height=800></img>
+                <h2>LOL韩国队亚运会夺冠，faker再次解锁新成就，可以终身领取奖金</h2>
+            </div>
+            <div class="body"><p>消息一出，网友们先是被“终身俸”三个字震了一下，紧接着看到金额，又集体乐了，按照韩国现行规则，达到条件的运动员可以选择每月领取30万韩元，折合人民币约1500元；也可以一次性领取2240万韩元，大约11万元人民币，于是评论区瞬间热闹起来。“Faker打了十几年职业，终于领上工资了。”“大魔王一个月的皮肤分成，可能都不止这个数。”</p></div>
+
+            </div>
+            <div class="img"><img src="./news2.webp" alt=""></div>
+            <div class="body"><p>“还不够买几张卡牌。”这种反差确实很有节目效果，毕竟在很多人的印象里，Faker早已经是电竞圈最顶级的选手之一，商业价值、赛事奖金、赞助合同加在一起，和普通运动员根本不是一个量级。每个月1500元放在他身上，看起来确实有些“喜感”。</p></div>
+            <div class="img"><img src="./news3.webp"></div>
+            <div class="body"><p>但仔细想想，这笔钱其实从来不是专门为Faker这种顶流选手设计的，体育奖励制度面对的是所有项目、所有层级的运动员，对于一些关注度不高、收入有限的项目来说，一份长期、稳定的补助，哪怕金额不算特别高，也意味着退役之后多了一份保障，所以网友替Faker嫌少，其实更多是在用顶流的收入标准，去衡量一套面向所有运动员的制度。</p></di>
+                <div class="body">原新闻页面:<a href="https://www.msn.cn/zh-cn/gaming/%E9%80%9A%E7%94%A8/lol%E9%9F%A9%E5%9B%BD%E9%98%9F%E4%BA%9A%E8%BF%90%E4%BC%9A%E5%A4%BA%E5%86%A0-faker%E5%86%8D%E6%AC%A1%E8%A7%A3%E9%94%81%E6%96%B0%E6%88%90%E5%B0%B1-%E5%8F%AF%E4%BB%A5%E7%BB%88%E8%BA%AB%E9%A2%86%E5%8F%96%E5%A5%96%E9%87%91/ar-AA2dAj6U?ocid=BingNewsSerp">点击查看详情</a></div>
+
+                <div class="sign">
+    <div class="av">
+        <img src="./avatar.jpg" alt="头像">
+    </div>
+    <div class="info">
+        <div class="name">狂三落泪我心碎</div>
+        <div class="hub">GitHub：<a href="https://github.com/tokisakikurumiii">@tokisakikurumiii</a></div>
+    </div>
+</div>
+                                    </div>
+
+
+       
+        
+        
+
+
+    
+</body>
+</html>
+<!-- https://www.msn.cn/zh-cn/gaming/%E9%80%9A%E7%94%A8/lol%E9%9F%A9%E5%9B%BD%E9%98%9F%E4%BA%9A%E8%BF%90%E4%BC%9A%E5%A4%BA%E5%86%A0-faker%E5%86%8D%E6%AC%A1%E8%A7%A3%E9%94%81%E6%96%B0%E6%88%90%E5%B0%B1-%E5%8F%AF%E4%BB%A5%E7%BB%88%E8%BA%AB%E9%A2%86%E5%8F%96%E5%A5%96%E9%87%91/ar-AA2dAj6U?ocid=BingNewsSerp -->
